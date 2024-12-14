@@ -82,6 +82,6 @@
           beginAtZero: true,
           title: { display: true, text: 'Solicitudes' },
         }
-      }*/
-    }
+      }
+    }*/
   });
