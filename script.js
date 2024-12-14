@@ -35,7 +35,9 @@
       }
     } catch (error) {
       totalRequestsElement.textContent = "No disponible";
-}
+      console.error('Error al obtener las estadísticas:', error);
+    }
+  }
 
   document.getElementById('total-requests').addEventListener('click', fetchTotalRequests);
 
@@ -56,4 +58,30 @@
       }
     });
   }
+
+ /* const ctx = document.getElementById('apiUsageChart').getContext('2d');
+  const apiUsageChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+      datasets: [{
+        label: 'Uso de API',
+        data: [65, 59, 80, 81, 56, 55, 40],
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          title: { display: true, text: 'Meses' },
+        },
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'Solicitudes' },
+        }
+      }*/
+    }
   });
